@@ -1,15 +1,14 @@
 <template>
   <div>
-    hhh
-    <Hwd v-model="value"></Hwd>
-    <Hwd v-model="value"></Hwd>
-    <Hwd v-model="value"></Hwd>
+    <banner></banner>
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=1714051576">wpa咨询</a>
   </div>
 
 </template>
 
 <script>
   import Hwd from "../components/HelloWorld"
+  import banner from "../components/common/headBanner"
     export default {
         name: "index",
       data(){
@@ -18,7 +17,8 @@
         }
       },
       components:{
-          Hwd
+          Hwd,
+        banner,
       }
     }
 </script>

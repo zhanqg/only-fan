@@ -9,4 +9,17 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    //rem基数计算
+    var oHtml = document.getElementsByTagName('html')[0];
+    var width_screen=document.documentElement.clientWidth || window.screen.width;
+    try{
+      window.localStorage.screenwidth = width_screen;
+    }catch(e){}
+    oHtml.style.fontSize = width_screen / 3.75 + "px";
+    window.onresize = function(){
+      width_screen=document.documentElement.clientWidth || window.screen.width;
+      oHtml.style.fontSize = width_screen / 3.75 + "px"
+    };
+  </script>
 </html>
