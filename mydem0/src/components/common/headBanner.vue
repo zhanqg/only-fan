@@ -22,9 +22,14 @@
                 headOption: {
                     pagination: {
                         el: '.swiper-pagination',
+                        //type: 'fraction',
                     },
-                    autoplay: true,
-                    loop: true,
+                    autoplay: false,
+                  // width: 3.2 * fontSize,
+                  // slidesOffsetBefore: .2*fontSize,
+                  // spaceBetween: .24*fontSize,
+                  loop: true,
+                  //initialSlide: 0,
                 }
             }
         },
@@ -35,24 +40,23 @@
         }
     }
 </script>
-
 <style scoped lang="scss">
     // 顶部轮播图
-    .swiper-img{
-      width: 3.35rem;
-      height: 1.5rem;
-    }
-    /*.head-banner{*/
-        /*background: #fff;*/
+    /*.swiper-img{*/
+      /*width: 3.75rem;*/
+      /*height: 1.3rem;*/
+    /*}*/
+    .head-banner{
+        background: #fff;
         /*padding-top:.14rem;*/
-        /*min-height:1.43rem;*/
-        /*.list-item{*/
-            /*height:1.43rem;*/
-            /*.swiper-img{*/
-                /*width:3.35rem;*/
-                /*height:100%;*/
-            /*}*/
-        /*}*/
+        min-height:1.5rem;
+        .list-item{
+            height:1.5rem;
+            .swiper-img{
+                width:3.75rem;
+                height:100%;
+            }
+        }
         /*.swiper-slide-next.list-item{*/
             /*height: 1.2rem;*/
             /*margin-top: 0.1rem;*/
@@ -61,6 +65,11 @@
             /*height: 1.2rem;*/
             /*margin-top: 0.1rem;*/
         /*}*/
-    /*}*/
+        /*}*/
+      .swiper-pagination{
+        height: .9rem;
+      }
+
+    }
 </style>
 
