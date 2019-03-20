@@ -15,14 +15,26 @@
             <div class="bottom"></div>
           </div>
         </div>
-
+          <button v-on:click="test">1111</button>
       </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "hot"
+        name: "hot",
+      methods:{
+        test:function () {
+          // this.axios.get('http://127.0.0.1:8090/user/reg')
+          //   .then(function (res) {
+          //     console.log(res);
+          //   })
+          this.axios.post('http://127.0.0.1:8090/user/reg')
+            .then((ress)=>{
+                console.log(ress)
+              })
+        }
+      }
     }
 </script>
 
