@@ -1,5 +1,13 @@
 <template>
   <div class="contain">
+    <div class="search flex-around">
+      <!--<input type="text" placeholder="请输入搜索的内容">-->
+      <el-input
+        placeholder="请输入搜索内容"
+        prefix-icon="el-icon-search"
+        v-model="searchText">
+      </el-input>
+    </div>
     <banner></banner>
     <div class="nav flex-around" >
       <div class="nav-item" v-for="(item,index) in classList">
@@ -30,7 +38,8 @@
               {img:'#icon-jiu1',name:'中外名酒'},
               {img:'#icon-naizhipin',name:'营养奶品'},
               {img:'#icon-lingshi',name:'休闲零食'},
-            ]
+            ],
+            searchText:''
         }
       },
       components:{
@@ -46,6 +55,14 @@
 .swiper-pagination-bullet-active{
   background: chocolate;
 }
+  .search .el-input__inner{
+    width: 3.75rem;
+    border-radius: .15rem;
+    height: .3rem;
+  }
+  .search .el-input__icon{
+    line-height: .3rem;
+  }
 </style>
 <style scoped lang="scss">
   /*@import "../assets/css/common.css";*/
@@ -54,6 +71,21 @@
     padding: 0;
     width: 3.75rem;
     background: #f4f6f6;
+    .search{
+      width: 100%;
+      height: .35rem;
+      input{
+        -web-kit-appearance:none;
+        -moz-appearance: none;
+        outline: 0;
+        width: 3.65rem;
+        height: .3rem;
+        border-radius: .15rem;
+        border: 1px #999 solid;
+        font-size: 0.16rem;
+      }
+    }
+
     .nav{
       margin: 20px auto;
       width: 3.45rem;
@@ -63,7 +95,7 @@
       border-radius: 10px;
       box-shadow: 0.8vw 1.067vw 5.333vw rgba(45,45,45,.15);
       .nav-item{
-        width: .5rem;
+        width: 20%;
         height: 1rem;
         display: flex;
         flex-direction: column;

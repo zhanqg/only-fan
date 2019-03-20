@@ -4,17 +4,15 @@
       <div class="content">
         <div class="flex-around content-item">
           <div class="item-left">
-            <div class="common-font">新鲜水果</div>
-            <div class="big">
-              <!--<img src="../../assets/img/1.jpg" alt="">-->
-              <span>￥123</span><br/><span>销量：221</span>
+            <div class="common-font16">新鲜水果</div>
+            <div class="big flex-around">
+              <img src="../../assets/img/1.jpg" alt="">
             </div>
+            <span class="common-font14">￥123</span><br/><span class="common-font14">销量：221</span>
           </div>
-          <div style="font-size: 20px;">
-            <span>啊啊啊啊</span>
-            <span>啊啊啊啊</span>
-            <span>啊啊啊啊</span>
-            <span>啊啊啊啊</span>
+          <div class="item-right">
+            <div class="top"></div>
+            <div class="bottom"></div>
           </div>
         </div>
 
@@ -32,6 +30,7 @@
   /*@import "../../assets/css/common.css";*/
   .hot-contain{
     width: 100%;
+    background: white;
     .hot-title{
       width: 100%;
       height: .3rem;
@@ -40,25 +39,35 @@
     }
     .content{
       border: 1px red solid;
-      content-item{
+      .content-item{
        width: 3.75rem;
        // height: 1.5rem;
-
+        .big{
+          width: 100%;
+        }
       }
     }
   }
-  .item-left{
-    img{
+    .item-left{
+      width: 50%;
+      border-right: 0.5px #f4f6f6 solid;
+      img{
 
-      width: 1.5rem;
-      height: 2rem;
-    }
-    .big{
-      width: 1.5rem;
-      height: 2.5rem;
-      span{
-        font-size: 0.12rem;
+        width: 1.5rem;
+        height: 2rem;
       }
+      .big{
+        width: 1.5rem;
+        height: 2.5rem;
+        span{
+          width: 0.2rem;
+        }
     }
+
   }
+  .item-right{
+     width: 50%;
+     height: 20px;
+     border: 1px seagreen solid;
+   }
 </style>

@@ -49,12 +49,14 @@
     .head-banner{
         background: #fff;
         /*padding-top:.14rem;*/
+      margin-top: .05rem;
         min-height:1.5rem;
         .list-item{
             height:1.5rem;
             .swiper-img{
                 width:3.75rem;
                 height:100%;
+                border-radius: 2px;
             }
         }
         /*.swiper-slide-next.list-item{*/
@@ -67,7 +69,7 @@
         /*}*/
         /*}*/
       .swiper-pagination{
-        height: .9rem;
+        height: .2rem;
       }
 
     }
