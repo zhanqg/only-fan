@@ -8,6 +8,7 @@
         v-model="searchText">
       </el-input>
     </div>
+    <div style="height: 0.35rem"></div>
     <banner></banner>
     <div class="nav flex-around" >
       <div class="nav-item" v-for="(item,index) in classList">
@@ -65,15 +66,19 @@
   }
 </style>
 <style scoped lang="scss">
-  /*@import "../assets/css/common.css";*/
+  @import "../assets/css/common.scss";
   .contain{
     margin: 0;
     padding: 0;
     width: 3.75rem;
-    background: #f4f6f6;
+    background: $bgcolor;
     .search{
       width: 100%;
       height: .35rem;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      background: $bgcolor;
       input{
         -web-kit-appearance:none;
         -moz-appearance: none;

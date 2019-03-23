@@ -4,10 +4,11 @@
       <div class="content">
         <div class="flex-around content-item">
           <div class="item-left">
-            <div class="common-font16">新鲜水果</div>
+            <div class="common-font16 sub-title">新鲜水果</div>
             <div class="big flex-around">
               <img src="../../assets/img/1.jpg" alt="">
             </div>
+            <span>怎么，想吃铁疙瘩嘛骂骂骂骂骂骂澳门妈妈妈妈</span><br>
             <span class="common-font14">￥123</span><br/><span class="common-font14">销量：221</span>
           </div>
           <div class="item-right">
@@ -15,7 +16,7 @@
             <div class="bottom"></div>
           </div>
         </div>
-          <button v-on:click="test">1111</button>
+          <!--<button v-on:click="test">1111</button>-->
       </div>
     </div>
 </template>
@@ -39,18 +40,21 @@
 </script>
 
 <style scoped lang="scss">
-  /*@import "../../assets/css/common.css";*/
+  @import "../../assets/css/common.scss";
   .hot-contain{
     width: 100%;
-    background: white;
+    /*background: white;*/
     .hot-title{
       width: 100%;
       height: .3rem;
-      /*border-radius: 15px;*/
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       background: white;
     }
     .content{
-      border: 1px red solid;
+      //border: 1px red solid;
+      background: white;
+      margin-top: 1px;
       .content-item{
        width: 3.75rem;
        // height: 1.5rem;
@@ -62,19 +66,26 @@
   }
     .item-left{
       width: 50%;
-      border-right: 0.5px #f4f6f6 solid;
+      border-right: 0.5px $bgcolor solid;
+      .sub-title{
+        height: 0.3rem;
+        line-height: 0.3rem;
+        text-align: center;
+        color: $indexsubtitle;
+      }
       img{
 
-        width: 1.5rem;
+        width: 95%;
         height: 2rem;
+        border-radius: 5px;
       }
-      .big{
-        width: 1.5rem;
-        height: 2.5rem;
+
         span{
-          width: 0.2rem;
+          width:95%;
+          display: inline-block;
+          margin: 0 auto;
         }
-    }
+
 
   }
   .item-right{
